@@ -1,10 +1,8 @@
-.title{
-    text-align: center;
-    color: blue;
-    color: fluorescent green;
+.title {
+  text-align: center;
+  color: rgb(0, 255, 0);
 }
-body
-{
-    background-color: black;
-    color: white;
+body {
+  background-color: black;
+  color: white;
 }
