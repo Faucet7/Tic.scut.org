@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>华南理工腾讯创新创业俱乐部官方网站</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-
+<script src="test1.js" defer></script>
 <body>
     <h1 class="title">华南理工腾讯创新创业俱乐部官方网站</h1>
     <h3>添加了标题 ----71綦 23.11.13</h3>
@@ -39,6 +38,20 @@
                 <h2 style="color: gray;">Normal</h2>
 
                 <h3>添加几个按钮/开关 并在后面添加随机数字 ----xxx 23.11.xx</h3>
+                <input type="button" value="一个按钮" name="button1" style="width: 200px; height: 30px;"/>
+                <input type="textbox" id="num1" value= ><br>
+                <input type="button" value="另一个按钮" name="button2" style="width: 200px; height: 30px;"/>
+                <input type="textbox" id="num2" value= ><br>
+                <input type="button" value="最后一个按钮" name="button3" style="width: 200px; height: 30px;"/>
+                <input type="textbox" id="num3" value= >
+                <script>
+                var num1 =document.getElementById("num1");
+                var num2 =document.getElementById("num2");
+                var num3 =document.getElementById("num3");
+                num1.value=Math.floor(Math.random()*100);
+                num2.value=Math.floor(Math.random()*100);
+                num3.value=Math.floor(Math.random()*100);
+                </script>
                 <h3>创建js文件并给按钮添加点击效果 要求点击后 随机数字加一 ----xxx 23.11.xx</h3>
                 <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----xxx 23.11.xx</h3>
                 <h3>在js中给开关添加点击效果 要求点击后 随机数字切换正负 ----xxx 23.11.xx</h3>
