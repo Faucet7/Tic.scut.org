@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "pixel";
+    src: url("fonts/IPix.ttf");
+}
+
 .title {
   text-align: center;
   color: rgb(0, 255, 0);
@@ -5,6 +10,7 @@
 body {
   background-color: black;
   color: white;
+  font-family: "pixel";
 }
 .textbox {
   width: 300px;
