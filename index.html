@@ -13,10 +13,35 @@
 <body>
     <h1 class="title">华南理工腾讯创新创业俱乐部官方网站</h1>
     <h3>添加了钟✌✌✌ ---- 587! 23.11.15</h3>
-
     <div style="display: flex;justify-content: center;margin: 0 16px;">
-        <iframe src="https://0x587.github.io/clock-of-clock/"
-            style="width: 60vw;height: 60vh;background-color: #FFF;border-radius: 18px;"></iframe>
+        <iframe src="https://0x587.github.io/clock-of-clock/" id="clock-iframe"
+            style="display: block; width: 60vw;height: 40vw;background-color: #FFF;border-radius: 18px;"></iframe>
+        <div style="display: none;font-size: 24px;" id="clock-hide">
+            <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>竖屏没有钟！竖屏没有钟！</p>
+        </div>
+        <script>
+            function onWindowSizeChange() {
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+                iframe = document.getElementById('clock-iframe');
+                iframeHide = document.getElementById('clock-hide');
+                if (width < height) {
+                    iframe.style.display = 'none';
+                    iframeHide.style.display = 'block';
+                }
+                else {
+                    iframe.style.display = 'block';
+                    iframeHide.style.display = 'none';
+                }
+            }
+            onWindowSizeChange();
+            window.addEventListener('resize', onWindowSizeChange);
+        </script>
     </div>
     <h3>添加了标题 ----71綦 23.11.13</h3>
 
