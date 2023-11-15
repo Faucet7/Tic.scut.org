@@ -44,11 +44,14 @@
         <h2 style="color: gray;">Normal</h2>
 
         <h3>添加几个按钮/开关 并在后面添加随机数字 ----李岳烁 23.11.14</h3>
-        <button class="nes-btn is-primary" value="一个按钮" name="button1" style="width: 160px;">一个按钮</button>
+        <button onclick="addone('num1')" class="nes-btn is-primary" value="一个按钮" name="button1"
+            style="width: 160px;">一个按钮</button>
         <input type="textbox" id="num1" value=><br>
-        <button class="nes-btn is-success" value="另一个按钮" name="button2" style="width: 160px;">又一个按钮</button>
+        <button onclick="addone('num2')" class="nes-btn is-success" value="另一个按钮" name="button2"
+            style="width: 160px;">又一个按钮</button>
         <input type="textbox" id="num2" value=><br>
-        <button class="nes-btn is-error" value="最后一个按钮" name="button3" style="width: 160px;">再一个按钮</button>
+        <button onclick="addone('num3')" class="nes-btn is-error" value="最后一个按钮" name="button3"
+            style="width: 160px;">再一个按钮</button>
         <input type="textbox" id="num3" value=>
         <script>
             var num1 = document.getElementById("num1");
