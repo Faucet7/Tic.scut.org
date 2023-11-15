@@ -19,9 +19,3 @@ function getRandomColor() {
     }
     return color;
 }
-
-function changeSign(){
-    var elem = document.getElementById("num3");
-    var present = parseInt(elem.value) || 0;
-    elem.value =0-present;
-}
