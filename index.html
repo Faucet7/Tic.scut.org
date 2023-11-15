@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>华南理工腾讯创新创业俱乐部官方网站</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 </head>
 <script src="test1.js" defer></script>
 
@@ -27,21 +28,15 @@
     </h4>
     <h3>在css文件中 所有文字改成一个像素风的字体 字体文件自己找 ----王子鑫 23.11.14</h3>
     <h3>在这条下面插入几张原神的图片 ----牛瑞雨 23.11.14</h3>
-    <img src="./assets/audios/images/image1.jpg" width="200px" alt="不是原神"/>
-        <img src="./assets/audios/images/image2.png" width="200px" alt="不是原神"/>
-    <img src="./assets/audios/images/image3.jpg" width="200px" alt="原神"/>
-    <img src="./assets/audios/images/image4.jpg" width="200px" alt="原神"/>
-            <h4 style="color: red;">[待解决] img标签写错了呀 看一下菜鸟教程？ 另外能不能再插入一张本地的图片
-            </h4>
-            <h3>在这条下面插入一条音频 要求音乐和原神相关 请自行查找 ----薛景妍 23.11.14</h3>
-            <audio src="./assets/audios/nian.mp3" controls></audio> 
-   <h3 id="hyperlink">将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----曹雪宸小23.11.xx</h3>
-<h3 id="hyperlink">将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----曹雪宸小23.11.xx
-   </h3>
-    <p><a href="https://www.yuanshen.com/">将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网</a></p>
-
-
-
+    <img src="./assets/audios/images/image1.jpg" width="200px" alt="不是原神" />
+    <img src="./assets/audios/images/image2.png" width="200px" alt="不是原神" />
+    <img src="./assets/audios/images/image3.jpg" width="200px" alt="原神" />
+    <img src="./assets/audios/images/image4.jpg" width="200px" alt="原神" />
+    <h4 style="color: red;">[待解决] img标签写错了呀 看一下菜鸟教程？ 另外能不能再插入一张本地的图片
+    </h4>
+    <h3>在这条下面插入一条音频 要求音乐和原神相关 请自行查找 ----薛景妍 23.11.14</h3>
+    <audio src="./assets/audios/nian.mp3" controls></audio>
+    <h3>将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----xxx 23.11.xx</h3>
     <h3>在这条下面插入一个文本框 可以输入文字的那种 不输入时的占位字符为：“想玩原神” ----陈锴亮 23.11.14</h3>
     <input type="text" class="textbox" placeholder="想玩原神">
     <h4 style="color: green;">[已解决] 完成的没问题！等js来接一下
@@ -49,13 +44,11 @@
         <h2 style="color: gray;">Normal</h2>
 
         <h3>添加几个按钮/开关 并在后面添加随机数字 ----李岳烁 23.11.14</h3>
-        <input type="button" value="一个按钮" name="button1" style="width: 200px; height: 30px;" onclick="addone('num1')" />
+        <button class="nes-btn is-primary" value="一个按钮" name="button1" style="width: 160px;">一个按钮</button>
         <input type="textbox" id="num1" value=><br>
-        <input type="button" value="另一个按钮" name="button2" style="width: 200px; height: 30px;"
-            onclick="addone('num2')" />
+        <button class="nes-btn is-success" value="另一个按钮" name="button2" style="width: 160px;">又一个按钮</button>
         <input type="textbox" id="num2" value=><br>
-        <input type="button" value="最后一个按钮" name="button3" style="width: 200px; height: 30px;"
-            onclick="addone('num3')" />
+        <button class="nes-btn is-error" value="最后一个按钮" name="button3" style="width: 160px;">再一个按钮</button>
         <input type="textbox" id="num3" value=>
         <script>
             var num1 = document.getElementById("num1");
@@ -65,16 +58,27 @@
             num2.value = Math.floor(Math.random() * 100);
             num3.value = Math.floor(Math.random() * 100);
         </script>
-        <h3>创建js文件并给按钮添加点击效果 要求点击后 随机数字加一 --- 胡昱之 23.11.15</h3>
-        <h3>给按钮添加点击效果 要求点击后 随机数字改变颜色 ----xxx 23.11.xx</h3>
+        <h3>创建js文件并给按钮添加点击效果 要求点击后 随机数字加一 ----xxx 23.11.xx</h3>
+        <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----xxx 23.11.xx</h3>
         <h3>在js中给开关添加点击效果 要求点击后 随机数字切换正负 ----xxx 23.11.xx</h3>
         <h3>在js中给这段文字添加效果 要求鼠标悬停在文字上面时 文字字号变大 移开后还原 ----xxx 23.11.xx</h3>
 
         <h2 style="color: red;">Hard</h2>
 
-        <h3>在js中请求一些有趣的api 并实现相应的效果 api可以自己找 这里推荐几个： https://zhuanlan.zhihu.com/p/616708019 ----xxx 23.11.xx
+        <h3>在js中请求一些有趣的api 并实现相应的效果 api可以自己找 这里推荐几个： https://zhuanlan.zhihu.com/p/616708019 ----hy 23.11.14
         </h3>
-        <h3>用css给按钮添加一些美化效果 比如点击动画 可以模仿ios的一些按钮组件 ----xxx 23.11.xx</h3>
+        <div class="nes-container with-title is-centered is-dark">
+            <p class="nes-text">添加了nes-css库,大家可以访问<a target="_blank"
+                    href="https://nostalgic-css.github.io/NES.css/#">nes-css官网</a>查看更多
+            </p>
+            <p class="nes-text is-primary">大家继续补充 </p>
+        </div>
+        <h3>用css给按钮添加一些美化效果 比如点击动画 可以模仿ios的一些按钮组件 ----hy 23.11.14</h3>
+        <button type="button" class="nes-btn is-primary">Primary</button>
+        <button type="button" class="nes-btn is-success">Success</button>
+        <button type="button" class="nes-btn is-warning">Warning</button>
+        <button type="button" class="nes-btn is-error">Error</button>
+        <button type="button" class="nes-btn is-disabled">Disabled</button>
         <h3>在js中 使上面的文本框中输入的文字 在点击回车之后插入到这条的下面（多次插入 ----xxx 23.11.xx</h3>
         <h3>实现点击图片放大查看 ----xxx 23.11.xx</h3>
 
