@@ -19,7 +19,21 @@ body {
   font-size: 16px;
 }
 
-body {
-    background-color: black;
-    color: white;
-}
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  #random-number {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  
