@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
 </head>
-<script src="test1.js" defer></script>
+<script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+      }
+    }
+</script>
+<script type="module" src="test1.js" defer></script>
+
 
 <body>
     <h1 class="title">华南理工腾讯创新创业俱乐部官方网站</h1>
@@ -18,6 +27,10 @@
         <iframe src="https://0x587.github.io/clock-of-clock/"
             style="width: 60vw;height: 60vh;background-color: #FFF;border-radius: 18px;"></iframe>
     </div>
+    <h4 style="position: fixed; top: 0; right: 0;">添加了robot ---- Crizz 23.11.15</h4>
+    <div class="robot" style=" overflow: hidden; position: fixed; top: 0; right: -3vw; transform: scale(.2); transform-origin: 100% 0;">
+    </div>
+
     <h3>添加了标题 ----71綦 23.11.13</h3>
 
     <h2 style="color: green;">Easy</h2>
@@ -45,7 +58,7 @@
     <h3>将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----xxx 23.11.xx</h3>
     <h3>在这条下面插入一个文本框 可以输入文字的那种 不输入时的占位字符为：“想玩原神” ----陈锴亮 23.11.14</h3>
     <input type="text" class="textbox" placeholder="想玩原神">
-    <h4 style="color: green;">[已解决] 完成的没问题！等js来接一下
+    <h4 style="color: green;">[已解决] 完成的没问题！等js来接一下</h4>
 
         <h2 style="color: gray;">Normal</h2>
 
