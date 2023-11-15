@@ -1,6 +1,11 @@
 @font-face {
-    font-family: "pixel";
-    src: url("fonts/IPix.ttf");
+  font-family: "pixel";
+  src: url("fonts/IPix.ttf");
+}
+
+@font-face {
+  font-family: "brush-pixel";
+  src: url("fonts/zpix.ttf");
 }
 
 .title {
@@ -8,9 +13,10 @@
   color: rgb(0, 255, 0);
 }
 body {
-  background-color: black;
-  color: white;
-  font-family: "pixel";
+  background-color: rgb(18, 18, 18) !important;
+  color: white !important;
+  font-family: "brush-pixel" !important;
+  padding-left: 8px;
 }
 .textbox {
   width: 300px;
