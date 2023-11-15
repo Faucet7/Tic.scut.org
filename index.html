@@ -68,7 +68,24 @@
                 <input type="checkbox" id="toggleButton"> <label for="toggleButton">Toggle Generator</label>
                 <div id="random-number">Click the button to generate a random number!</div>
                 <script src="script.js"></script>
-                <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----xxx 23.11.xx</h3>
+                <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----陈嘉颖 23.11.xx</h3>
+                <script>
+                    const colorButton=document.getElementById('button2');
+                    function changeColor(){
+                        const randomColor=getRandomColor();
+                        colorButton.style.backgroundColor=randomColor;
+                    }
+                    colorButton.addEventListener('click',changeColor);
+                    funcion getRandomColor(){
+                        const letters='0123456789ABCDEF';
+                        let color='#';
+                        for(let i =0;i<6;i++){
+                            color += letters[Math.floor(Math.random()*16)];
+                        }
+                        return color;
+                    }
+                </script>
+                
                 <h3>在js中给开关添加点击效果 要求点击后 随机数字切换正负 ----xxx 23.11.xx</h3>
                 <h3>在js中给这段文字添加效果 要求鼠标悬停在文字上面时 文字字号变大 移开后还原 ----xxx 23.11.xx</h3>
 
