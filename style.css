@@ -24,10 +24,10 @@ body {
   padding: 5px;
   font-size: 16px;
 }
-mark1 {
+mark01 {
 font-size: 16px;
 transition: font-size 0.3s;
 }
-mark1:hover {
+mark01:hover {
 font-size: 25px; 
 }
