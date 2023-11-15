@@ -25,37 +25,43 @@
     <div style="display: flex;justify-content: center;margin: 0 16px;">
         <iframe src="https://0x587.github.io/clock-of-clock/" id="clock-iframe"
             style="display: block; width: 60vw;height: 40vw;background-color: #FFF;border-radius: 18px;"></iframe>
-        <div style="display: none;font-size: 24px;" id="clock-hide">
+        <div style="display: none;font-size: 24px;text-align: center;" id="clock-hide">
             <p>竖屏没有钟！竖屏没有钟！</p>
             <p>竖屏没有钟！竖屏没有钟！</p>
             <p>竖屏没有钟！竖屏没有钟！</p>
             <p>竖屏没有钟！竖屏没有钟！</p>
             <p>竖屏没有钟！竖屏没有钟！</p>
             <p>竖屏没有钟！竖屏没有钟！</p>
+            <p>阿里大师说：手机端不适配机器人，想要小机器人请使用高贵的电脑，想要进阿里得不许玩手机了，都给我用电脑</p>
         </div>
-        <script>
-            function onWindowSizeChange() {
-                var width = window.innerWidth;
-                var height = window.innerHeight;
-                iframe = document.getElementById('clock-iframe');
-                iframeHide = document.getElementById('clock-hide');
-                if (width < height) {
-                    iframe.style.display = 'none';
-                    iframeHide.style.display = 'block';
-                }
-                else {
-                    iframe.style.display = 'block';
-                    iframeHide.style.display = 'none';
-                }
+    </div>
+    <div class="robot"
+        style=" overflow: hidden; position: fixed; top: 0; right: -3vw; transform: scale(.2); transform-origin: 100% 0;">
+    </div>
+    <h4>添加了robot ---- Crizz 23.11.15</h4>
+    <h4 style="color: green;">[已解决] 阿里大师做得很好，但是我对你期望很高的，你最近的表现还是让我有略点失望 </h4>
+    <script>
+        function onWindowSizeChange() {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            iframe = document.getElementById('clock-iframe');
+            iframeHide = document.getElementById('clock-hide');
+            robot = document.querySelector('.robot')
+            console.log(robot);
+            if (width < height) {
+                iframe.style.display = 'none';
+                iframeHide.style.display = 'block';
+                robot.style.display = 'none'
             }
-            onWindowSizeChange();
-            window.addEventListener('resize', onWindowSizeChange);
-        </script>
-    </div>
-    <h4 style="position: fixed; top: 0; right: 0;">添加了robot ---- Crizz 23.11.15</h4>
-    <div class="robot" style=" overflow: hidden; position: fixed; top: 0; right: -3vw; transform: scale(.2); transform-origin: 100% 0;">
-    </div>
-
+            else {
+                iframe.style.display = 'block';
+                iframeHide.style.display = 'none';
+                robot.style.display = 'block'
+            }
+        }
+        onWindowSizeChange();
+        window.addEventListener('resize', onWindowSizeChange);
+    </script>
     <h3>添加了标题 ----71綦 23.11.13</h3>
 
     <h2 style="color: green;">Easy</h2>
@@ -96,7 +102,8 @@
     <button onclick="addone('num1')" class="nes-btn is-primary" value="一个按钮" name="button1"
         style="width: 160px;">+1</button>
     <input type="textbox" id="num1" value=><br>
-    <button onclick="changecolor()" class="nes-btn is-success"value="另一个按钮" name="button2" style="width: 160px;">改变颜色</button>
+    <button onclick="changecolor()" class="nes-btn is-success" value="另一个按钮" name="button2"
+        style="width: 160px;">改变颜色</button>
     <input type="textbox" id="num2" value=><br>
     <button class="nes-btn is-error" value="最后一个按钮" name="button3" style="width: 160px;">切换正负</button>
     <input type="textbox" id="num3" value=>

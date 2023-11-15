@@ -1,16 +1,16 @@
 function addone(id) {
-  var elem = document.getElementById(id)
-  var presnt = parseInt(elem.value) || 0
-  elem.value = presnt + 1
+  var elem = document.getElementById(id);
+  var presnt = parseInt(elem.value) || 0;
+  elem.value = presnt + 1;
 }
 
 // 借用一下你的文件，放个机器人
-import * as THREE from 'three'
+import * as THREE from "three";
 
-import Stats from 'three/addons/libs/stats.module.js'
-import { GUI } from 'three/addons/libs/lil-gui.module.min.js'
+import Stats from "three/addons/libs/stats.module.js";
+import { GUI } from "three/addons/libs/lil-gui.module.min.js";
 
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 let container,
   stats,
@@ -20,53 +20,53 @@ let container,
   actions,
   activeAction,
   previousAction,
-  actionIndex = 1
-let camera, scene, renderer, model, face
+  actionIndex = 1;
+let camera, scene, renderer, model, face;
 const states = [
-  'Idle',
-  'Walking',
-  'Running',
-  'Dance',
-  'Death',
-  'Sitting',
-  'Standing'
-]
+  "Idle",
+  "Walking",
+  "Running",
+  "Dance",
+  "Death",
+  "Sitting",
+  "Standing",
+];
 
-const api = { state: 'Walking' }
+const api = { state: "Walking" };
 
-init()
-animate()
+init();
+animate();
 
 function init() {
-  const wrap = document.querySelector('.robot')
-  wrap.addEventListener('click', changeAction)
-  container = document.createElement('div')
-  wrap.appendChild(container)
+  const wrap = document.querySelector(".robot");
+  wrap.addEventListener("click", changeAction);
+  container = document.createElement("div");
+  wrap.appendChild(container);
 
   camera = new THREE.PerspectiveCamera(
     45,
     window.innerWidth / window.innerHeight,
     0.25,
     100
-  )
-  camera.position.set(-3, 1, 9)
-  camera.lookAt(0, 3, 0)
+  );
+  camera.position.set(-3, 1, 9);
+  camera.lookAt(0, 3, 0);
 
-  scene = new THREE.Scene()
+  scene = new THREE.Scene();
   // scene.background = new THREE.Color( 0x121212 );
-  scene.background = null
-  scene.fog = new THREE.Fog(0xe0e0e0, 20, 100)
-  clock = new THREE.Clock()
+  scene.background = null;
+  scene.fog = new THREE.Fog(0xe0e0e0, 20, 100);
+  clock = new THREE.Clock();
 
   // lights
 
-  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 3)
-  hemiLight.position.set(0, 20, 0)
-  scene.add(hemiLight)
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 3);
+  hemiLight.position.set(0, 20, 0);
+  scene.add(hemiLight);
 
-  const dirLight = new THREE.DirectionalLight(0xffffff, 3)
-  dirLight.position.set(0, 20, 10)
-  scene.add(dirLight)
+  const dirLight = new THREE.DirectionalLight(0xffffff, 3);
+  dirLight.position.set(0, 20, 10);
+  scene.add(dirLight);
 
   // ground
 
@@ -81,26 +81,26 @@ function init() {
 
   // model
 
-  const loader = new GLTFLoader()
+  const loader = new GLTFLoader();
   loader.load(
-    './assets/glb/RobotExpressive.glb',
+    "./assets/glb/RobotExpressive.glb",
     function (gltf) {
-      model = gltf.scene
-      scene.add(model)
+      model = gltf.scene;
+      scene.add(model);
 
-      createGUI(model, gltf.animations)
+      createGUI(model, gltf.animations);
     },
     undefined,
     function (e) {
-      console.error(e)
+      console.error(e);
     }
-  )
+  );
 
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  renderer.setPixelRatio(window.devicePixelRatio)
-  renderer.setSize(1920, 800)
-  container.appendChild(renderer.domElement)
-  renderer.setClearAlpha(0)
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(1920, 1000);
+  container.appendChild(renderer.domElement);
+  renderer.setClearAlpha(0);
 
   // window.addEventListener( 'resize', onWindowResize );
 
@@ -110,22 +110,22 @@ function init() {
 }
 
 function createGUI(model, animations) {
-  const emotes = ['Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp']
+  const emotes = ["Jump", "Yes", "No", "Wave", "Punch", "ThumbsUp"];
 
   // gui = new GUI();
 
-  mixer = new THREE.AnimationMixer(model)
+  mixer = new THREE.AnimationMixer(model);
 
-  actions = {}
+  actions = {};
 
   for (let i = 0; i < animations.length; i++) {
-    const clip = animations[i]
-    const action = mixer.clipAction(clip)
-    actions[clip.name] = action
+    const clip = animations[i];
+    const action = mixer.clipAction(clip);
+    actions[clip.name] = action;
 
     if (emotes.indexOf(clip.name) >= 0 || states.indexOf(clip.name) >= 4) {
-      action.clampWhenFinished = true
-      action.loop = THREE.LoopOnce
+      action.clampWhenFinished = true;
+      action.loop = THREE.LoopOnce;
     }
   }
 
@@ -190,18 +190,18 @@ function createGUI(model, animations) {
 
   // }
 
-  activeAction = actions[states[actionIndex]]
-  activeAction.play()
+  activeAction = actions[states[actionIndex]];
+  activeAction.play();
 
   // expressionFolder.open();
 }
 
 function fadeToAction(name, duration) {
-  previousAction = activeAction
-  activeAction = actions[name]
+  previousAction = activeAction;
+  activeAction = actions[name];
 
   if (previousAction !== activeAction) {
-    previousAction.fadeOut(duration)
+    previousAction.fadeOut(duration);
   }
 
   activeAction
@@ -209,39 +209,39 @@ function fadeToAction(name, duration) {
     .setEffectiveTimeScale(1)
     .setEffectiveWeight(1)
     .fadeIn(duration)
-    .play()
+    .play();
 }
 
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight
-  camera.updateProjectionMatrix()
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
 
-  renderer.setSize(window.innerWidth, window.innerHeight)
+  renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 //
 
 function animate() {
-  const dt = clock.getDelta()
+  const dt = clock.getDelta();
 
-  if (mixer) mixer.update(dt)
+  if (mixer) mixer.update(dt);
 
-  requestAnimationFrame(animate)
+  requestAnimationFrame(animate);
 
-  renderer.render(scene, camera)
+  renderer.render(scene, camera);
 }
 
 function changeAction() {
-  fadeToAction(states[++actionIndex % states.length], 0.2)
+  fadeToAction(states[++actionIndex % states.length], 0.2);
 }
 
 function changecolor() {
-    let button = document.getElementById("num2"); // access the button by id
-    let color = button.style.color;
-    if (color == "red") { // if button color is red change it green otherwise change it to red.
-       button.style.color = 'green';
-    } else {
-       button.style.color = 'red';
-    }
- }
-
+  let button = document.getElementById("num2"); // access the button by id
+  let color = button.style.color;
+  if (color == "red") {
+    // if button color is red change it green otherwise change it to red.
+    button.style.color = "green";
+  } else {
+    button.style.color = "red";
+  }
+}
