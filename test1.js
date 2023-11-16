@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 function addone(id) {
   var elem = document.getElementById(id);
   var presnt = parseInt(elem.value) || 0;
@@ -247,5 +245,3 @@ function changecolor() {
     button.style.color = "red";
   }
 }
-
->>>>>>> Stashed changes
