@@ -25,6 +25,14 @@ body {
   font-size: 16px;
 }
 
+mark01 {
+font-size: 16px;
+transition: font-size 0.3s;
+}
+mark01:hover {
+font-size: 25px; 
+}
+
 /* 弹窗 */
 .modal{
   display: none;
@@ -61,4 +69,5 @@ body {
   margin: auto;
   display: block;
   padding: 40px;
+
 }
