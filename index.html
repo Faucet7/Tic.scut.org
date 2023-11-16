@@ -120,7 +120,25 @@
     <h3>创建js文件并给按钮添加点击效果 要求点击后 随机数字加一 ----胡昱之 23.11.15</h3>
     <h4 style="color: green;">[已解决] 奈斯 相当不错 </h4>
 
-    <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ---- 胡昱之、彭欣玥23.11.16</h3>
+
+    <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----陈嘉颖 23.11.15</h3>
+    <script>
+        const colorButton=document.getElementById('button2');
+        function changeColor(){
+            const randomColor=getRandomColor();
+            colorButton.style.backgroundColor=randomColor;
+        }
+        colorButton.addEventListener('click',changeColor);
+        funcion getRandomColor(){
+            const letters='0123456789ABCDEF';
+            let color='#';
+            for(let i =0;i<6;i++){
+                color += letters[Math.floor(Math.random()*16)];
+            }
+            return color;
+        }
+    </script>
+    
 
     <h3>在js中给开关添加点击效果 要求点击后 随机数字切换正负 ----xxx 23.11.xx</h3>
     <h3 id="hyperlink">将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----曹雪宸小 & xxx 23.11.15</h3>
