@@ -17,7 +17,7 @@
     }
 </script>
 <script type="module" src="test1.js" defer></script>
-
+<script src="func.js" defer></script>
 
 <body>
     <h1 class="title">华南理工腾讯创新创业俱乐部官方网站</h1>
@@ -99,10 +99,10 @@
     <h2 style="color: gray;">Normal</h2>
 
     <h3>添加几个按钮/开关 并在后面添加随机数字 ----李岳烁 23.11.14</h3>
-    <button onclick="addone('num1')" class="nes-btn is-primary" value="一个按钮" name="button1"
+    <button onclick="addone()" class="nes-btn is-primary" value="一个按钮" name="button1"
         style="width: 160px;">+1</button>
     <input type="textbox" id="num1" value=><br>
-    <button onclick="changecolor()" class="nes-btn is-success" value="另一个按钮" name="button2"
+    <button onclick="setBottonRandomColor()" class="nes-btn is-success" value="另一个按钮" name="button2"
         style="width: 160px;">改变颜色</button>
     <input type="textbox" id="num2" value=><br>
     <button class="nes-btn is-error" value="最后一个按钮" name="button3" style="width: 160px;">切换正负</button>
@@ -119,6 +119,7 @@
 
     <h3>创建js文件并给按钮添加点击效果 要求点击后 随机数字加一 ----胡昱之 23.11.15</h3>
     <h4 style="color: green;">[已解决] 奈斯 相当不错 </h4>
+
 
     <h3>在js中给按钮添加点击效果 要求点击后 随机数字改变颜色 ----陈嘉颖 23.11.15</h3>
     <script>
@@ -138,6 +139,7 @@
         }
     </script>
     
+
     <h3>在js中给开关添加点击效果 要求点击后 随机数字切换正负 ----xxx 23.11.xx</h3>
     <h3 id="hyperlink">将这个需求变为一个超链接 要求这个链接可以在js中随意配置 默认链接为原神的官网 ----曹雪宸小 & xxx 23.11.15</h3>
     <script>
@@ -165,7 +167,26 @@
     <button type="button" class="nes-btn is-error">Error</button>
     <button type="button" class="nes-btn is-disabled">Disabled</button>
     <h3>在js中 使上面的文本框中输入的文字 在点击回车之后插入到这条的下面（多次插入 ----xxx 23.11.xx</h3>
-    <h3>实现点击图片放大查看 ----xxx 23.11.xx</h3>
+    <h3>实现点击图片放大查看 ----I am Genshin's Dog 23.11.16</h3>
+    <div class="modal" id="modal">
+        <img id="bigimage" alt="Big Image" onclick="hideModal()">
+    </div>
+    <div>
+        <img class="thum-img" id="thumImg" onclick="showModal(this)" src="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/0ff41bd5ad6eddc4ccf5b6d53adbb6fd52663389.jpg">
+    </div>
+    <script>
+        function showModal(image){
+            var modal=document.getElementById('modal');
+            var thumImg= document.getElementById('thumImg');
+            modal.style.display='block';
+            bigimage.src=image.src;
+          }
+          
+          function hideModal(){
+            var modal=document.getElementById('modal');
+            modal.style.display='none';
+          }
+    </script>
 
     <h2 style="color: blue;">还有高手？</h2>
 
