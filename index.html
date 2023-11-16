@@ -148,7 +148,26 @@
     <button type="button" class="nes-btn is-error">Error</button>
     <button type="button" class="nes-btn is-disabled">Disabled</button>
     <h3>在js中 使上面的文本框中输入的文字 在点击回车之后插入到这条的下面（多次插入 ----xxx 23.11.xx</h3>
-    <h3>实现点击图片放大查看 ----xxx 23.11.xx</h3>
+    <h3>实现点击图片放大查看 ----I am Genshin's Dog 23.11.16</h3>
+    <div class="modal" id="modal">
+        <img id="bigimage" alt="Big Image" onclick="hideModal()">
+    </div>
+    <div>
+        <img class="thum-img" id="thumImg" onclick="showModal(this)" src="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/0ff41bd5ad6eddc4ccf5b6d53adbb6fd52663389.jpg">
+    </div>
+    <script>
+        function showModal(image){
+            var modal=document.getElementById('modal');
+            var thumImg= document.getElementById('thumImg');
+            modal.style.display='block';
+            bigimage.src=image.src;
+          }
+          
+          function hideModal(){
+            var modal=document.getElementById('modal');
+            modal.style.display='none';
+          }
+    </script>
 
     <h2 style="color: blue;">还有高手？</h2>
 
