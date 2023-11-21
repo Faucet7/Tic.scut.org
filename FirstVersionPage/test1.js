@@ -1,4 +1,3 @@
-
 // 借用一下你的文件，放个机器人
 import * as THREE from "three";
 
@@ -78,7 +77,7 @@ function init() {
 
   const loader = new GLTFLoader();
   loader.load(
-    "./assets/glb/RobotExpressive.glb",
+    "../assets/glb/RobotExpressive.glb",
     function (gltf) {
       model = gltf.scene;
       scene.add(model);
@@ -229,4 +228,3 @@ function animate() {
 function changeAction() {
   fadeToAction(states[++actionIndex % states.length], 0.2);
 }
-
