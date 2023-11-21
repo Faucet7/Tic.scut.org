@@ -17,6 +17,9 @@ var nowPage = {};
 
 function created() {
   nowPage = pageList[0];
+  var webView = document.getElementById("webView");
+  console.log(webView);
+  webView.src = nowPage.url;
 }
 created();
 
@@ -32,6 +35,7 @@ function switchPage(step) {
   }
   document.getElementById("versionBtn").textContent =
     "Version " + nowPage.version;
+  webView.src = nowPage.url;
 }
 
 function goVersionPage() {
