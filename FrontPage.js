@@ -1,7 +1,7 @@
 var pageList = [
   {
     version: 1,
-    url: "../FirstVersionPage/index.html",
+    url: "FirstVersionPage/index.html",
   },
   {
     version: 2,
