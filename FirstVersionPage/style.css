@@ -1,11 +1,11 @@
 @font-face {
   font-family: "pixel";
-  src: url("fonts/IPix.ttf");
+  src: url("../fonts/IPix.ttf");
 }
 
 @font-face {
   font-family: "brush-pixel";
-  src: url("fonts/zpix.ttf");
+  src: url("../fonts/zpix.ttf");
 }
 
 .title {
@@ -26,15 +26,15 @@ body {
 }
 
 mark01 {
-font-size: 16px;
-transition: font-size 0.3s;
+  font-size: 16px;
+  transition: font-size 0.3s;
 }
 mark01:hover {
-font-size: 25px; 
+  font-size: 25px;
 }
 
 /* 弹窗 */
-.modal{
+.modal {
   display: none;
   margin: auto;
   position: fixed;
@@ -42,17 +42,21 @@ font-size: 25px;
   top: 10%;
   width: 90%;
   height: 90%;
-  background-color: rgb(255,255,255,1);
+  background-color: rgb(255, 255, 255, 1);
   z-index: 1;
 }
 
 /* 丑丑的动画*/
 @keyframes zoom {
-  from{transform: scale(0.1)}
-  to {transform: scale(1)}
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 /* 弹窗出现后的图片 */
-.modal>img{
+.modal > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -63,11 +67,10 @@ font-size: 25px;
   animation-duration: 0.5s;
 }
 /* 原始图片哈 */
-.thum-img{
+.thum-img {
   width: 30%;
   height: 30%;
   margin: auto;
   display: block;
   padding: 40px;
-
 }

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "brush-pixel";
+  src: url("../fonts/zpix.ttf");
+}
+
+body {
+  font-family: "brush-pixel" !important;
+}
+
+.title {
+  font-size: 32px !important;
+  transform: translateY(-40%);
+  padding: 0 32px !important;
+  font-weight: bold !important;
+}
+
+.nes-btn:nth-child(2) {
+  color: white !important;
+  font-weight: bold !important;
+  padding: 0 32px;
+}
+
+.board {
+  width: 50%;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+.buttons-group-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 64px;
+}

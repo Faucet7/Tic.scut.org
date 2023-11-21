@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="FrontPage.css">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <script src="FrontPage.js" defer></script>
+</head>
+
+<body>
+    <div class="nes-container is-rounded with-title is-centered board">
+        <p class="title">腾讯创新俱乐部告示板</p>
+        <p>这是最新的告示板</p>
+        <div class="buttons-group-container">
+            <button onclick="switchPage(-1)" type="button" class="nes-btn is-error">Last</button>
+            <button onclick="goVersionPage()" type="button" id="versionBtn" class="nes-btn is-warning">Version
+                1</button>
+            <button onclick="switchPage(1)" type="button" class="nes-btn is-success">Next</button>
+        </div>
+    </div>
+</body>
+
+</html>
